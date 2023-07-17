@@ -2,7 +2,7 @@ import qrcode
 import sys
 import os
 
-def main():
+def main():      
     # Obtain the url across the argument line program
     url = sys.argv[1]
     
@@ -15,8 +15,11 @@ def main():
     # Create directory if exists
     os.makedirs(qr_directory, exist_ok = True)
     
+    # Check if user give a file name
+    file_name = sys.argv[2] if sys.argv[2] is not None else 'qrcode.png'   
+    
     # Save QRCode
-    image_path = os.path.join(qr_directory, 'qrcode.png')
+    image_path = os.path.join(qr_directory, file_name)
     qrcode_object.save(image_path)
     
 
