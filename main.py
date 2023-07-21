@@ -11,7 +11,7 @@ def main():
         qrcode_object = qrcode.make(url)
         
         # Directory to save the qrcode image
-        qr_directory = os.path.join(os.getcwd(), 'pics', 'qr')
+        qr_directory = os.path.join('pics', 'qr')
         
         # Create directory if exists
         os.makedirs(qr_directory, exist_ok = True)
