@@ -5,7 +5,7 @@ from src.manual import Manual
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:   
+    if len(sys.argv) < 2:
         ColorPrint.print_error('Debes especificar una URL para generar el código QR.')
     else:
         arg = sys.argv[1]
@@ -19,5 +19,5 @@ if __name__ == '__main__':
             else:
                 file_name = sys.argv[2]
                 qrcode_gen = QRCodeGenerator(arg, file_name)
-                ColorPrint.print_info(f'Código QR generado con el nombre {file_name}')            
+                ColorPrint.print_info(f'Código QR generado con el nombre {file_name}')
             qrcode_gen.create()
