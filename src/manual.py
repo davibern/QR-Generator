@@ -16,8 +16,8 @@ Example:
 python main.py https://google.es google.png"""
 
 
-class Manual:  
-    
+class Manual:
+
     @staticmethod
     def print_manual():
         ColorPrint.print_standard(text_manual)

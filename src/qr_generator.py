@@ -7,7 +7,7 @@ class QRCodeGenerator:
         self.url = url
         self.file_name = file_name
         self.qr_directory = os.path.join('pics', 'qr')
-        
+
     def create(self):
         os.makedirs(self.qr_directory, exist_ok=True)
         qrcode_object = qrcode.make(self.url)
